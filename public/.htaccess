@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  Options -MultiViews
+  DirectoryIndex index.html
+
+  # 1. Serve existing files directly (e.g., css, js, images)
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # 2. Prioritize serving .html files over directories (fixes 403 Forbidden)
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+
+  # 3. Alternative check using DOCUMENT_ROOT (sometimes required on GoDaddy)
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.*?)/?$ $1.html [L]
+
+  # 4. Fallback to index.html or 404
+  RewriteRule ^ index.html [L]
+  ErrorDocument 404 /404.html
+</IfModule>

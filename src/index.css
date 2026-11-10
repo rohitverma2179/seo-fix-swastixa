@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Stabilizes text weight/anti-aliasing for text sitting inside GSAP
+   transform-pinned or scale/translate-animated ancestors (Safari renders
+   text heavier when its transformed ancestor isn't promoted to its own
+   compositing layer). Purely a rendering fix — no visual/layout change. */
+.heading,
+.gsap-pin,
+.gsap-pin * {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.heading {
+    font-family: var(--font-rajdhani), "Rajdhani", system-ui, sans-serif;
+}
+
+p {
+    font-family: var(--font-chakra-petch), "Chakra Petch", system-ui, sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-rajdhani), "Rajdhani", system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  video {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+.neon-border {
+    border: 2px solid rgba(110, 110, 255, 0.45);
+    box-shadow: 0 0 25px rgba(130, 130, 255, 0.35),
+        inset 0 0 35px rgba(140, 140, 255, 0.25);
+}
+
+.neon-glow {
+    box-shadow: 0 0 85px rgba(130, 130, 255, 0.35);
+}
+
+
+
+.magic-bento {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.magic-bento * {
+  transform-style: preserve-3d;
+}

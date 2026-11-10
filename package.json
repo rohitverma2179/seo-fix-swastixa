@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@tanstack/react-virtual": "^3.13.13",
+    "framer-motion": "^12.23.24",
+    "glob": "^13.0.6",
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.16",
+    "lucide-react": "^0.555.0",
+    "motion": "^13.2.0",
+    "next": "15.5.4",
+    "ogl": "^1.0.11",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^5.5.0",
+    "react-type-animation": "^3.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.16",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16",
+    "typescript": "^5.9.3"
+  },
+  "name": "swastixa",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve@latest out",
+    "check:alt": "node scripts/check-alt.mjs",
+    "predeploy": "npm run check:alt && next build"
+  },
+  "version": "1.0.0"
+}

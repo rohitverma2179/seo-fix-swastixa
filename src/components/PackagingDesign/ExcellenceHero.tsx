@@ -1,0 +1,138 @@
+"use client";
+
+import React from "react";
+import { useNavigate } from "@/lib/router";
+
+const ExcellenceHero = () => {
+  const navigate = useNavigate();
+
+  return (
+    <section className="min-h-screen pt-24 mb-10 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 lg:px-20">
+
+        {/* CENTER TITLE */}
+        <div className="text-center pt-20 lg:pt-24 pb-20">
+          <h1
+            className="
+              text-white
+              font-bold
+              leading-none
+              text-[44px]
+              sm:text-[56px]
+              md:text-[72px]
+              lg:text-[96px]
+            "
+          >
+            Packaging Design Agency in <span className="text-[#3A6CF4]">Gurugram</span>
+          </h1>
+        </div>
+
+        {/* CONTENT */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+          {/* LEFT CONTENT */}
+          <div className="max-w-[520px]">
+
+            <h2
+              className="
+                text-white
+                uppercase
+                font-medium
+                tracking-[4px]
+                text-[20px]
+                md:text-[24px]
+                lg:text-[32px]
+                leading-[1.15]
+              "
+            >
+              Design Packaging That Makes Your Brand Stand Out
+            </h2>
+
+            <p
+              className="
+                mt-6
+                text-[#8B8B8B]
+                text-[15px]
+                leading-[1.9]
+                max-w-[600px]
+              "
+            >
+              Packaging is often the first physical touchpoint between your product and your customer. It influences perception, builds recall, and plays an important role in purchase decisions. At Swastixa, we create packaging and design solutions that make your product look distinctive, professional, and market-ready.
+            </p>
+
+            <p
+              className="
+                mt-3
+                text-[#8B8B8B]
+                text-[15px]
+                leading-[1.9]
+                max-w-[600px]
+              "
+            >
+              Our packaging and design approach combine visual appeal, brand storytelling, product clarity, and consumer understanding. From labels and boxes to complete packaging systems, we ensure that every design communicates the product’s value while helping it stand out on shelves and digital marketplaces.
+            </p>
+
+            <button
+              className="
+                mt-10
+                bg-[#1F1F22]
+                text-white
+                font-medium
+                px-10
+                py-5
+                rounded-xl
+                transition-all
+                duration-300
+                hover:bg-[#2A2A2E]
+                hover:scale-[1.02]
+                cursor-pointer
+              "
+              onClick={() => {
+                navigate("/#contact");
+              }}
+            >
+              Start Our Project
+            </button>
+
+          </div>
+
+          {/* RIGHT VISUAL */}
+          <div className="relative flex justify-center lg:justify-end">
+
+            <div className="relative w-full max-w-[560px]">
+
+              <div
+                className="
+                  overflow-hidden
+                  rounded-[28px]
+                  shadow-[0_20px_80px_rgba(255,255,255,0.04)]
+                "
+              >
+                <img loading="eager" fetchPriority="high" decoding="sync"                   src="https://cdn.swastixa.com/swastixaservice/service-all-eight-pages-images/swastixa-service-packaging-desing.webp"
+                  alt="Swastixa packaging designers reviewing D2C product packaging mockups"
+                  width={1600}
+                  height={900}
+                  className="
+                    w-full
+                    h-[420px]
+                    md:h-[480px]
+                    object-cover
+                    transition-transform
+                    max-sm:h-auto
+        max-sm:object-contain
+                  "
+                />
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default ExcellenceHero;

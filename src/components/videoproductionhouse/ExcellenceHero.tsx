@@ -1,0 +1,138 @@
+"use client";
+
+import React from "react";
+import { useNavigate } from "@/lib/router";
+
+const ExcellenceHero = () => {
+  const navigate = useNavigate();
+
+  return (
+    <section className="min-h-screen pt-24 mb-10 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 lg:px-20">
+
+        {/* CENTER TITLE */}
+        <div className="text-center pt-20 lg:pt-24 pb-20">
+          <h1
+            className="
+              text-white
+              font-bold
+              leading-none
+              text-[44px]
+              sm:text-[56px]
+              md:text-[72px]
+              lg:text-[96px]
+            "
+          >
+            Video Production House in <span className="text-[#3A6CF4]">Gurugram</span>
+          </h1>
+        </div>
+
+        {/* CONTENT */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+          {/* LEFT CONTENT */}
+          <div className="max-w-[520px]">
+
+            <h2
+              className="
+                text-white
+                uppercase
+                font-medium
+                tracking-[4px]
+                text-[20px]
+                md:text-[24px]
+                lg:text-[32px]
+                leading-[1.15]
+              "
+            >
+              Bring Your Stories to Life
+            </h2>
+
+            <p
+              className="
+                mt-6
+                text-[#8B8B8B]
+                text-[15px]
+                leading-[1.9]
+                max-w-[600px]
+              "
+            >
+              Video is one of the most powerful ways to capture attention, explain ideas, and create emotional impact. As a Video Production House, Swastixa produces compelling videos that help brands communicate their message clearly and memorably.
+            </p>
+
+            <p
+              className="
+                mt-3
+                text-[#8B8B8B]
+                text-[15px]
+                leading-[1.9]
+                max-w-[600px]
+              "
+            >
+              From brand films and product videos to reels, corporate videos, social media videos, testimonials, and campaign films, we create videos that are planned for the platform, audience, and communication objective. We help bring your brand message to life with strong storytelling and visual quality.
+            </p>
+
+            <button
+              className="
+                mt-10
+                bg-[#1F1F22]
+                text-white
+                font-medium
+                px-10
+                py-5
+                rounded-xl
+                transition-all
+                duration-300
+                hover:bg-[#2A2A2E]
+                hover:scale-[1.02]
+                cursor-pointer
+              "
+              onClick={() => {
+                navigate("/#contact");
+              }}
+            >
+              Start Our Project
+            </button>
+
+          </div>
+
+          {/* RIGHT VISUAL */}
+          <div className="relative flex justify-center lg:justify-end">
+
+            <div className="relative w-full max-w-[560px]">
+
+              <div
+                className="
+                  overflow-hidden
+                  rounded-[28px]
+                  shadow-[0_20px_80px_rgba(255,255,255,0.04)]
+                "
+              >
+                <img loading="eager" fetchPriority="high" decoding="sync"                   src="https://cdn.swastixa.com/swastixaservice/service-all-eight-pages-images/swastixa-service-video-production.webp"
+                  alt="Swastixa video production crew filming a brand commercial in Gurugram"
+                  width={1600}
+                  height={900}
+                  className="
+                    w-full
+                    h-[420px]
+                    md:h-[480px]
+                    object-cover
+                    transition-transform
+                    max-sm:h-auto
+        max-sm:object-contain
+                  "
+                />
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default ExcellenceHero;
